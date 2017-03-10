@@ -1,5 +1,5 @@
-# insight-ai-proj
-An artificial intelligence project with Insight AI  
+# Redio
+A project with Insight AI
 
 # Cobalt Robotics | Audio Classification
 ### Problem 
