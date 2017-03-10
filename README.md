@@ -1,5 +1,5 @@
-# Redio
-A project with Insight AI
+# REDIO
+Recognition Events of auDIO: AI project with Insight AI
 
 ### Cobalt Robotics | Audio Classification
 ### Problem 
