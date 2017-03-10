@@ -1,7 +1,7 @@
 # Redio
 A project with Insight AI
 
-# Cobalt Robotics | Audio Classification
+### Cobalt Robotics | Audio Classification
 ### Problem 
 Cobalt Robotics | Audio Classification | Problem description
 Our robot is equipped with a sensitive microphone for hearing things around it, and we would like to classify a multitude of different sounds that the robot might encounter around it. There are several online databases with large numbers of sound effect samples, such as http://www.freesound.org/browse/tags/window/. Some initial topics that we’d like to classify are glass breaking, people talking, footsteps, car horns, car noises, music, and fans. 
