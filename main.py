@@ -14,8 +14,6 @@ def features_extract_store(folder_name = 'Urban-Sound-Classification',
                           persist = True):
 
     data_handler = FeatureExtractor(file_dir = folder_name, num_labels = n_label)
-
-
     if persist :
         pickle.dump(mfcc_pd,open('./data/193_features_'+mode+'.p','wb'))
 
@@ -28,5 +26,6 @@ def features_extract_store(folder_name = 'Urban-Sound-Classification',
 if __name__ == '__main__':
     us_folder = '/home/paperspace/Documents/Notebooks/Urban-Sound-Classification/'
     sub_folder_list = ['fold1', 'fold2', 'fold3', 'fold4', 'fold5', 'fold6', 'fold7', 'fold8', 'fold9', 'fold10']
-    futils.get_features
-    main()
+    X, sr = librosa.load(usfold_dir +'UrbanSound8K/audio/fold1/102106-3-0-0.wav'))
+    print futils.get_features(X, sr)
+    #main()
