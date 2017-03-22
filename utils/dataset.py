@@ -4,7 +4,7 @@ import numpy as np
 
 class FeatureExtractor(object):
     def __init__(self, file_dir = None, num_labels = 10):
-        self.dataset = []]
+        self.dataset = []
         self.dir = file_dir
         self.nlabel = num_labels
 
