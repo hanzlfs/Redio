@@ -19,6 +19,8 @@ def features_extract_store(dir_name = 'Urban-Sound-Classification',
         folder_path = dir_name + folder + '/'
         files_list = [f for f in os.listdir(folder_path) if os.path.isfile(os.path.join(folder_path, f))]
         for file_name in files_list:
+            file_name_path = folder_path + file_name
+            features = data_handler.feature_extractor(file_name_path)
             try:
                 file_name_path = folder_path + file_name
                 features = data_handler.feature_extractor(file_name_path)
