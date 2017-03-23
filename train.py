@@ -47,7 +47,8 @@ if __name__ == '__main__':
     sub_folder_list = ['fold1', 'fold2', 'fold3', 'fold4', 'fold5', 'fold6', 'fold7', 'fold8', 'fold9', 'fold10']
 
     features_extract_store(dir_name = us_folder + 'UrbanSound8K/audio/',
-                           sub_folders = sub_folder_list[:1],
-                           meta_data = us_folder + 'UrbanSound8K/metadata/UrbanSound8K.csv')
+                           sub_folders = sub_folder_list[:2],
+                           meta_data = us_folder + 'UrbanSound8K/metadata/UrbanSound8K.csv',
+                           persist = True)
     #print futils.get_features(X, sr)
     #main()
