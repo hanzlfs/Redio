@@ -13,7 +13,7 @@ def features_extract_store(dir_name = 'Urban-Sound-Classification',
                           meta_data = None,
                           mode = 'train',
                           persist = True):
-    raw_sound = pd.read_csv(usfold_dir + 'UrbanSound8K/metadata/UrbanSound8K.csv')
+    raw_sound = pd.read_csv(meta_data)
     data_handler = FeatureExtractor(num_labels = n_label)
     for folder_id, folder in enumerate(sub_folders):
         folder_path = dir_name + folder + '/'
