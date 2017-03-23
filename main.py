@@ -21,14 +21,13 @@ def features_extract_store(dir_name = 'Urban-Sound-Classification',
         for file_name in files_list:
             try:
                 file_name_path = folder_path + file_name
-                #feat = data_handler.feature_extractor(file_name_path)
+                features = data_handler.feature_extractor(file_name_path)
             except:
                 print(file_name)
                 continue
             list_row = raw_sound.loc[raw_sound['slice_file_name']==file_name].values.tolist()
             label = list_row[0][-1]
-            print (label, folder_id + 1)
-            #data_handler.data.append([])
+            data_handler.data.append([features, features.shape, label, folder_id + 1])
     if persist :
         #pickle.dump(mfcc_pd,open('./data/193_features_'+mode+'.p','wb'))
         return None
