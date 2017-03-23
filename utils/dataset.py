@@ -9,7 +9,7 @@ class FeatureExtractor(object):
 
     def feature_extractor(self, full_filepath):
         X, sr = librosa.load(full_filepath)
-        mfccs,chroma,mel,contrast,tonnetz = get_feature(X, sr)
+        mfccs,chroma,mel,contrast,tonnetz = get_features(X, sr)
         ext_features = np.hstack([mfccs,chroma,mel,contrast,tonnetz])
         stack_features = np.empty((0,193))
         stack_features = np.vstack([stack_features,ext_features])
