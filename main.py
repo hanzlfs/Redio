@@ -14,7 +14,7 @@ def features_extract_store(dir_name = 'Urban-Sound-Classification',
                           mode = 'train',
                           persist = True):
 
-    data_handler = FeatureExtractor(file_dir = dir_name, num_labels = n_label)
+    data_handler = FeatureExtractor(num_labels = n_label)
     for folder in sub_folders:
         folder_path = dir_name + folder + '/'
         files = [f for f in os.listdir(folder_path) if os.path.isfile(os.path.join(folder_path, f))]
