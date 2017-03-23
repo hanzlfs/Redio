@@ -35,7 +35,7 @@ if __name__ == '__main__':
     #X, sr = librosa.load(us_folder +'UrbanSound8K/audio/fold1/102106-3-0-0.wav')
 
     features_extract_store(dir_name = us_folder + 'UrbanSound8K/audio/',
-                           sub_folders = sub_folder_list[:8],
+                           sub_folders = sub_folder_list[:1]
                            )
     #print futils.get_features(X, sr)
     #main()
