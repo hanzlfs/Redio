@@ -12,7 +12,7 @@ def reconstruct_dataframe
 def features_extract_store(dir_name = 'Urban-Sound-Classification',
                           sub_folders = [], n_label = 10,
                           meta_data = None, mode = 'train',
-                          persist = False, export_file = './data/193_features_'):
+                          persist = False, export_file = './datasets/193_features_'):
     raw_sound = pd.read_csv(meta_data)
     data_handler = FeatureExtractor(num_labels = n_label)
     for folder_id, folder in enumerate(sub_folders):
