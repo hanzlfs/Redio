@@ -1,5 +1,6 @@
 import os, pickle, librosa
 import soundfile as sf
+import pandas as pd
 
 from utils import feature as futils
 from utils.dataset import FeatureExtractor
@@ -12,20 +13,25 @@ def features_extract_store(dir_name = 'Urban-Sound-Classification',
                           meta_data = None,
                           mode = 'train',
                           persist = True):
-
+    raw_sound = pd.read_csv(usfold_dir + 'UrbanSound8K/metadata/UrbanSound8K.csv')
     data_handler = FeatureExtractor(num_labels = n_label)
-    for folder in sub_folders:
+    for folder_id, folder in enumerate(sub_folders):
         folder_path = dir_name + folder + '/'
         files_list = [f for f in os.listdir(folder_path) if os.path.isfile(os.path.join(folder_path, f))]
         for file_name in files_list:
             try:
                 file_name_path = folder_path + file_name
-                X, sr = librosa.load(file_name_path)
+                #feat = data_handler.feature_extractor(file_name_path)
             except:
                 print(file_name)
+                continue
+            list_row = raw_sound.loc[raw_sound['slice_file_name']==file_name].values.tolist()
+            label = l_row[0][-1]
+            print (label, folder_id + 1)
+            #data_handler.data.append([])
 
     if persist :
-        pickle.dump(mfcc_pd,open('./data/193_features_'+mode+'.p','wb'))
+        #pickle.dump(mfcc_pd,open('./data/193_features_'+mode+'.p','wb'))
 
 
 
@@ -39,7 +45,7 @@ if __name__ == '__main__':
     #X, sr = librosa.load(us_folder +'UrbanSound8K/audio/fold1/102106-3-0-0.wav')
 
     features_extract_store(dir_name = us_folder + 'UrbanSound8K/audio/',
-                           sub_folders = sub_folder_list[:1]
-                           )
+                           sub_folders = sub_folder_list[:1],
+                           meta_data = us_folder + 'UrbanSound8K/metadata/UrbanSound8K.csv')
     #print futils.get_features(X, sr)
     #main()
