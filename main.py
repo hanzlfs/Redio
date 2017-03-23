@@ -26,7 +26,7 @@ def features_extract_store(dir_name = 'Urban-Sound-Classification',
                 print(file_name)
                 continue
             list_row = raw_sound.loc[raw_sound['slice_file_name']==file_name].values.tolist()
-            label = l_row[0][-1]
+            label = list_row[0][-1]
             print (label, folder_id + 1)
             #data_handler.data.append([])
     if persist :
