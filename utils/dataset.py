@@ -24,8 +24,8 @@ class FeatureExtractor(object):
         label_num = []
         for l in labels:
             for i in range(n_class):
-                if label == label_dict[i]
-                label_num.append(i)
+                if label == label_dict[i]:
+                    label_num.append(i)
         label_ohe = np.array(one_hot(label_num))
         for i in range(n_class):
             self.df[label_dict[i][:8]] = label_ohe[:,i]
