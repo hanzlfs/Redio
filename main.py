@@ -8,19 +8,15 @@ from utils.dataset import FeatureExtractor
 ### extract features from UrbanSound8K
 
 def features_extract_store(dir_name = 'Urban-Sound-Classification',
-                          sub_folders = [],
-                          n_label = 10,
-                          meta_data = None,
-                          mode = 'train',
-                          persist = True):
+                          sub_folders = [], n_label = 10,
+                          meta_data = None, mode = 'train',
+                          persist = False, export_file = './data/193_features_'):
     raw_sound = pd.read_csv(meta_data)
     data_handler = FeatureExtractor(num_labels = n_label)
     for folder_id, folder in enumerate(sub_folders):
         folder_path = dir_name + folder + '/'
         files_list = [f for f in os.listdir(folder_path) if os.path.isfile(os.path.join(folder_path, f))]
         for file_name in files_list:
-            file_name_path = folder_path + file_name
-            features = data_handler.feature_extractor(file_name_path)
             try:
                 file_name_path = folder_path + file_name
                 features = data_handler.feature_extractor(file_name_path)
@@ -31,8 +27,7 @@ def features_extract_store(dir_name = 'Urban-Sound-Classification',
             label = list_row[0][-1]
             data_handler.data.append([features, features.shape, label, folder_id + 1])
     if persist :
-        #pickle.dump(mfcc_pd,open('./data/193_features_'+mode+'.p','wb'))
-        return None
+        pickle.dump(data_handler.data, open(export_file + mode + '.p','wb'))
 
 
 
