@@ -5,13 +5,15 @@ import tensorflow as tf
 
 from utils import feature as futils
 from utils.dataset import FeatureExtractor
-
+from models.classifier import AudioNNModel as ANN
 ### extract features from UrbanSound8K
+us_folder = '/home/paperspace/Documents/Notebooks/Urban-Sound-Classification/'
+sub_folder_list = ['fold1', 'fold2', 'fold3', 'fold4', 'fold5', 'fold6', 'fold7', 'fold8', 'fold9', 'fold10']
 
 def features_extract_store(dir_name = 'Urban-Sound-Classification',
                           sub_folders = [], n_label = 10,
                           meta_data = None, mode = 'train',
-                          persist = False, export_file = './datasets/193_features_'):
+                          persist = False, export_file = './datasets/193_features.p'):
     raw_sound = pd.read_csv(meta_data)
     data_handler = FeatureExtractor(num_labels = n_label)
     for folder_id, folder in enumerate(sub_folders):
@@ -31,24 +33,32 @@ def features_extract_store(dir_name = 'Urban-Sound-Classification',
     data_handler.label_mapping(labels = data_handler.df['label'], n_class = 10)
     print "dataframe shape", data_handler.df.shape
     if persist :
-        pickle.dump(data_handler.df, open(export_file + mode + '.p','wb'))
-    else :
-        return data_handler.df
+        pickle.dump(data_handler.df, open(export_file,'wb'))
+    return data_handler.df
 
-def train():
-    return None
+#def data_split(data):
+
+
+def train(tr_file = None):
+
+    if not os.isfile(tr_file):
+        data = features_extract_store(dir_name = us_folder + 'UrbanSound8K/audio/',
+                               sub_folders = sub_folder_list[:8], meta_data = us_folder + 'UrbanSound8K/metadata/UrbanSound8K.csv',
+                               persist = True, export_file = tr_file)
+    else :
+        data = pickle.load(open(tr_file, 'rb'))
+    s = list(data['sample'])
+    s = pd.DataFrame(s)
+    data_cols = s.columns
+    s['label'] = data['label']
+    print('working dataframe\'s shape:', s.shape)
 
 ### train a two layer Conv NN and store
 
 ### restore and eval it
 
 if __name__ == '__main__':
-    us_folder = '/home/paperspace/Documents/Notebooks/Urban-Sound-Classification/'
-    sub_folder_list = ['fold1', 'fold2', 'fold3', 'fold4', 'fold5', 'fold6', 'fold7', 'fold8', 'fold9', 'fold10']
-
-    features_extract_store(dir_name = us_folder + 'UrbanSound8K/audio/',
-                           sub_folders = sub_folder_list[:2],
-                           meta_data = us_folder + 'UrbanSound8K/metadata/UrbanSound8K.csv',
-                           persist = True)
+    train_filepath = './datasets/193_features_train.p'
+    train(tr_file = train_filepath)
     #print futils.get_features(X, sr)
     #main()
