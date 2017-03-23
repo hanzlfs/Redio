@@ -41,7 +41,7 @@ def features_extract_store(dir_name = 'Urban-Sound-Classification',
 
 def train(tr_file = None):
 
-    if not os.isfile(tr_file):
+    if not os.path.isfile(tr_file):
         data = features_extract_store(dir_name = us_folder + 'UrbanSound8K/audio/',
                                sub_folders = sub_folder_list[:8], meta_data = us_folder + 'UrbanSound8K/metadata/UrbanSound8K.csv',
                                persist = True, export_file = tr_file)
