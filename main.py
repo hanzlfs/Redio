@@ -7,7 +7,6 @@ from utils import feature as futils
 from utils.dataset import FeatureExtractor
 
 ### extract features from UrbanSound8K
-def reconstruct_dataframe
 
 def features_extract_store(dir_name = 'Urban-Sound-Classification',
                           sub_folders = [], n_label = 10,
