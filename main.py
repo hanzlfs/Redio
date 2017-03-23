@@ -1,11 +1,13 @@
 import os, pickle, librosa
 import soundfile as sf
 import pandas as pd
+import tensorflow as tf
 
 from utils import feature as futils
 from utils.dataset import FeatureExtractor
 
 ### extract features from UrbanSound8K
+def reconstruct_dataframe
 
 def features_extract_store(dir_name = 'Urban-Sound-Classification',
                           sub_folders = [], n_label = 10,
@@ -26,10 +28,13 @@ def features_extract_store(dir_name = 'Urban-Sound-Classification',
             list_row = raw_sound.loc[raw_sound['slice_file_name']==file_name].values.tolist()
             label = list_row[0][-1]
             data_handler.data.append([features, features.shape, label, folder_id + 1])
+    data_handler.df = pd.DataFrame(data = data_handler.data , columns = ["features", "shape","label", "fold"])
+    data_handler.label_mapping(labels = data_handler.df['label'], n_class = 10)
+    print "dataframe shape", data_handler.df.shape
     if persist :
-        pickle.dump(data_handler.data, open(export_file + mode + '.p','wb'))
-
-
+        pickle.dump(data_handler.df, open(export_file + mode + '.p','wb'))
+    else :
+        return data_handler.df
 
 ### train a two layer Conv NN and store
 
