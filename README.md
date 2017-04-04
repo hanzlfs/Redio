@@ -34,13 +34,12 @@ The idea is to use "visual knowledge" from pre-trained image classification netw
 ##### Prior Work 
 Previous initial work done to classify general audio anomalies, including doing some feature extraction from audio data. 
 
-
-### Reference
-[1] SoundNet: Learning Sound Representations from Unlabeled Video : By Yusuf Aytar, Carl Vondrick, Antonio Torralba. NIPS 2016
-
-
 ##### Deliverable 
 We would like a model that can classify a 1 second audio clip in real time. Our robot runs a full linux desktop environment with a GPU. Implementations in python would be easiest to integrate. We would also like the full training pipeline so that we can retrain the model as we collect more data. There are some prior works doing music classification in Keras: https://keras.io/applications/#musictaggercrnn. 
 
 How Cobalt Robotics would implement the result If we agree that the model is reasonable we will integrate it into our code and deploy it onto all of our robots.
+
+### Reference
+[1] SoundNet: Learning Sound Representations from Unlabeled Video : By Yusuf Aytar, Carl Vondrick, Antonio Torralba. NIPS 2016
+
 
