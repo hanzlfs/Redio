@@ -3,8 +3,8 @@ Recognition Events of auDIO: AI project with Insight AI
 
 ## Cobalt Robotics | Audio Classification
 ### Problem 
-<div style="text-align: right"> 
 Cobalt Robotics | Audio Classification | Problem description
+<div style="text-align: center"> 
 Cobalt Robotics is a company focusing on security robotics. This project is aiming to help them to integrate audio detection with their current object detection technologies for improving the sensitivity of their robotics detection system.
 </div>
 
