@@ -19,6 +19,8 @@ The idea is to use "visual knowledge" from pre-trained image classification netw
 
 #### Supervised Learning
 
+<img src="./blog/images/supervised.png" width="95%">
+
 #### Transfer Learning
 
 ### Pipelines
