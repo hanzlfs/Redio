@@ -1,12 +1,12 @@
-<div style="text-align: right"> your-text-here </div>
-
 # REDIO
 Recognition Events of auDIO: AI project with Insight AI
 
 ## Cobalt Robotics | Audio Classification
 ### Problem 
+<div style="text-align: right"> 
 Cobalt Robotics | Audio Classification | Problem description
 Cobalt Robotics is a company focusing on security robotics. This project is aiming to help them to integrate audio detection with their current object detection technologies for improving the sensitivity of their robotics detection system.
+</div>
 
 ### Description of data 
 To tackle this problem, I finally chose two public data resources, ESC50 [link]() and UrbanSound8K [link](). 
