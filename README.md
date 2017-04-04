@@ -6,14 +6,23 @@ Recognition Events of auDIO: AI project with Insight AI
 Cobalt Robotics | Audio Classification | Problem description
 Our robot is equipped with a sensitive microphone for hearing things around it, and we would like to classify a multitude of different sounds that the robot might encounter around it. There are several online databases with large numbers of sound effect samples, such as http://www.freesound.org/browse/tags/window/. Some initial topics that we’d like to classify are glass breaking, people talking, footsteps, car horns, car noises, music, and fans. 
 
-### Description of the data 
-To tackle this problem, I finally chose two public data resources, ESC50 [link]() and UrbanSound8K [link](). 
+### Description of data 
+To tackle this problem, I finally chose two public data resources, ESC50 [link]() and UrbanSound8K [link]().  There is an alternative data set in a very large scale, AudioSet, which is released by Google ealy this year. The reason I did not choose it is that the data set did not include their raw audio data because of youtube's license. The data set only includes extracted frames from the raw data by the team, which means we could not work on new data without their feature extraction methods. But if we can use the team's pretrained network to extract features. 
+
+### Results
+
+
 
 ### Method
 
 #### Supervised Learning
 
 #### Transfer Learning
+
+### Pipelines
+
+[By Zhonglin](./blog/images/pipeline.png)
+
 
 ### Results
 
