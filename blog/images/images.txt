@@ -7,4 +7,4 @@ Method
 
 Pipelines
 
-./blog/images/
+./blog/images/pipeline.png
