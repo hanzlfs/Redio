@@ -19,7 +19,7 @@ The best result I got during the four-week-long project was using transfer learn
 The idea is to use "visual knowledge" from pre-trained image classification network, like VGG [1] to do a cross modality learning on audio data. The idea is shown as following. 
 </div>
 
-<img src="./blog/images/transfer_learing.png " width="90%">
+<img src="./blog/images/transfer_learing.png" width="95%">
 
 ### Method
 
@@ -29,7 +29,7 @@ The idea is to use "visual knowledge" from pre-trained image classification netw
 
 ### Pipelines
 
-![By Zhonglin](./blog/images/pipeline.png)
+<img src="./blog/images/pipeline.png" width="95%">
 
 
 ### Results
