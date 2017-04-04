@@ -21,7 +21,7 @@ To tackle this problem, I finally chose two public data resources, ESC50 [link](
 
 ### Pipelines
 
-[By Zhonglin](./blog/images/pipeline.png)
+![By Zhonglin](./blog/images/pipeline.png)
 
 
 ### Results
