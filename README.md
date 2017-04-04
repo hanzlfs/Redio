@@ -13,8 +13,7 @@ To tackle this problem, I finally chose two public data resources, ESC50 [link](
 
 The best result I got during the four-week-long project was using transfer learning. The idea is to use "visual knowledge" from pre-trained image classification network, like VGG [1] to do a cross modality learning on audio data. The idea is shown as following. 
 
-![By Zhonglin](./blog/images/transfer_learing.png)
-<img src="./blog/images/transfer_learing.png " width="75%">
+<img src="./blog/images/transfer_learing.png " width="90%">
 
 ### Method
 
