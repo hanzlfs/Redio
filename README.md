@@ -4,13 +4,16 @@ Recognition Events of auDIO: AI project with Insight AI
 ## Cobalt Robotics | Audio Classification
 ### Problem 
 Cobalt Robotics | Audio Classification | Problem description
-Our robot is equipped with a sensitive microphone for hearing things around it, and we would like to classify a multitude of different sounds that the robot might encounter around it. There are several online databases with large numbers of sound effect samples, such as http://www.freesound.org/browse/tags/window/. Some initial topics that we’d like to classify are glass breaking, people talking, footsteps, car horns, car noises, music, and fans. 
+Cobalt Robotics is a company focusing on security robotics. This project is aiming to help them to integrate audio detection with their current object detection technologies for improving the sensitivity of their robotics detection system.
 
 ### Description of data 
 To tackle this problem, I finally chose two public data resources, ESC50 [link]() and UrbanSound8K [link]().  There is an alternative data set in a very large scale, AudioSet, which is released by Google ealy this year. The reason I did not choose it is that the data set did not include their raw audio data because of youtube's license. The data set only includes extracted frames from the raw data by the team, which means we could not work on new data without their feature extraction methods. But if we can use the team's pretrained network to extract features. 
 
 ### Results
 
+The best result I got during the four-week-long project was using transfer learning. The idea is to use "visual knowledge" from pre-trained image classification network, like VGG [1] to do a cross modality learning on audio data. The idea is shown as following. 
+
+![By Zhonglin](./blog/images/transfer_learing.png)
 
 
 ### Method
