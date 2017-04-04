@@ -19,7 +19,7 @@ The idea is to use "visual knowledge" from pre-trained image classification netw
 
 #### Supervised Learning
 
-<img src="./blog/images/supervised.png" height="142" width="142">
+<img src="./blog/images/supervised.png" height="420" width="420">
 
 #### Transfer Learning
 
