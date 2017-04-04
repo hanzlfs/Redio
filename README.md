@@ -9,16 +9,15 @@ Cobalt Robotics is a company focusing on security robotics. This project is aimi
 </div>
 
 ### Description of data 
-To tackle this problem, I finally chose two public data resources, ESC50 [link]() and UrbanSound8K [link](). 
-There is an alternative data set in a very large scale, AudioSet, which is released by Google ealy this year. 
-The reason I did not choose it is that the data set did not include their raw audio data because of youtube's license. 
-The data set only includes extracted frames from the raw data by the team, which means we could not work on new data without their feature extraction methods. 
-But if we can use the team's pretrained network to extract features. 
+<div style="text-align: center"> 
+To tackle this problem, I finally chose two public data resources, ESC50 [link]() and UrbanSound8K [link]().  There is an alternative data set in a very large scale, AudioSet, which is released by Google ealy this year. The reason I did not choose it is that the data set did not include their raw audio data because of youtube's license. The data set only includes extracted frames from the raw data by the team, which means we could not work on new data without their feature extraction methods. But if we can use the team's pretrained network to extract features. 
+</div>
 
 ### Results
-
+<div style="text-align: center"> 
 The best result I got during the four-week-long project was using transfer learning. 
 The idea is to use "visual knowledge" from pre-trained image classification network, like VGG [1] to do a cross modality learning on audio data. The idea is shown as following. 
+</div>
 
 <img src="./blog/images/transfer_learing.png " width="90%">
 
