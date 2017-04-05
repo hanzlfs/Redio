@@ -17,6 +17,10 @@ The idea is to use "visual knowledge" from pre-trained image classification netw
 
 ### Method
 
+### Demo 
+<iframe src="https://player.vimeo.com/video/211705086" width="640" height="372" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<p><a href="https://vimeo.com/211705086">Demo08-02</a> from <a href="https://vimeo.com/user65107231">Zhonglin Han</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+
 #### Supervised Learning
 
 <img src="./blog/images/supervised.png" width="95%">
