@@ -19,6 +19,9 @@ The idea is to use "visual knowledge" from pre-trained image classification netw
 
 ### Demo 
 
+[![Little red ridning hood](http://i.imgur.com/7YTMFQp.png)](https://vimeo.com/3514904 "Little red riding hood - Click to Watch!")
+
+
 #### Supervised Learning
 
 <img src="./blog/images/supervised.png" width="95%">
