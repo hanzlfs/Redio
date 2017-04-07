@@ -1,6 +1,8 @@
 # REDIO
 Recognition Events of auDIO: AI project with Insight AI
 
+Slides [link](https://docs.google.com/presentation/d/1ALXwNHKOsLdYTEyHCAV_YUIgZBmYjZ-r_RcUyJ5ujzk/edit#slideid.p38)
+
 ## Cobalt Robotics | Audio Classification
 ### Problem 
 Cobalt Robotics | Audio Classification | Problem description
