@@ -1,0 +1,11 @@
+
+Results
+./blog/images/
+
+Method 
+./blog/images/transfer_learing.png
+./blog/images/
+
+Pipelines
+
+./blog/images/pipeline.png
