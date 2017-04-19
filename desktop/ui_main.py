@@ -48,9 +48,9 @@ class Ui_MainWindow(object):
         self.label = QtGui.QLabel(self.frame)
         self.label.setObjectName(_fromUtf8("label"))
         self.verticalLayout.addWidget(self.label)
-        self.grFFT = PlotWidget(self.frame)
-        self.grFFT.setObjectName(_fromUtf8("grFFT"))
-        self.verticalLayout.addWidget(self.grFFT)
+        #self.grFFT = PlotWidget(self.frame)
+        #self.grFFT.setObjectName(_fromUtf8("grFFT"))
+        #self.verticalLayout.addWidget(self.grFFT)
         self.label_2 = QtGui.QLabel(self.frame)
         self.label_2.setObjectName(_fromUtf8("label_2"))
         self.verticalLayout.addWidget(self.label_2)
@@ -65,5 +65,5 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(_translate("Audio Classification", "Audio Classification", None))
-        self.label.setText(_translate("Audio Classification", "frequency data (FFT):", None))
-        self.label_2.setText(_translate("Audio Classification", "Spectrum data (PCM):", None))
+        #self.label.setText(_translate("Audio Classification", "frequency data (FFT):", None))
+        self.label_2.setText(_translate("Audio Classification", "Spectrum data:", None))
