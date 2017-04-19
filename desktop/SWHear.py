@@ -15,7 +15,6 @@ def getFFT(data,rate):
     data=data*np.hamming(len(data))
     fft=np.fft.fft(data)
     fft=np.abs(fft)
-    #fft=10*np.log10(fft)
     freq=np.fft.fftfreq(len(fft),1.0/rate)
     return freq[:int(len(freq)/2)],fft[:int(len(fft)/2)]
 
@@ -43,8 +42,20 @@ class SWHear():
         self.chunksRead=0
         self.device=device
         self.rate=rate
+        self.audioAUG, self.updateCount = [], 0
 
     ### SYSTEM TESTS
+
+    def accumlate(self,):
+        if self.updateCount == 20 :
+            self.audioAUG, self.updateCount = [], 0
+        else:
+            if self.updateCount == 0 :
+                self.audioAUG = self.datax
+            else :
+                self.audioAUG = np.concatenate((self.audioAUG, self.datax), axis = 0)
+            self.updateCount += 1
+        print "1 sec chuncks"
 
     def valid_low_rate(self,device):
         """set the rate to the lowest supported audio rate."""
